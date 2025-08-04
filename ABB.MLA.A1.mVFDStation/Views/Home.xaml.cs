@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace ABB.MLA.A1.mVFDStation.Views
 {
@@ -22,9 +23,14 @@ namespace ABB.MLA.A1.mVFDStation.Views
     /// </summary>
     public partial class Home : Page
     {
+        HomeViewModel HomeViewModel;
+        ModbusClass mb;
         public Home(HomeViewModel homeViewModel, ModbusClass modbusClass)
         {
             InitializeComponent();
+            HomeViewModel = homeViewModel;
+            mb = modbusClass;
+            DataContext = homeViewModel;
         }
     }
 }

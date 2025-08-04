@@ -4,6 +4,86 @@
              xmlns:local="clr-namespace:ABB.MLA.A1.mVFDStation"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" x:Key="buttonback">
+            <GradientStop Color="#FFE5E5E5" Offset="0.42"/>
+            <GradientStop Color="#FFF7F7F7" Offset="0.112"/>
+            <GradientStop Color="#FFB6B6B6" Offset="0.9"/>
+            <GradientStop Color="#FFBEBEBE" Offset="0.7"/>
+            <GradientStop Color="#FFD1D1D1" Offset="0.5"/>
+        </LinearGradientBrush>
+        <Style x:Key="Button_all" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource buttonback}"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="FontFamily" Value="Abbvoiceoffice"/>
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style x:Key="Button_all1" TargetType="ToggleButton">
+            <Setter Property="Background" Value="{StaticResource buttonback}"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="FontFamily" Value="Abbvoiceoffice"/>
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style x:Key="texters001" TargetType="TextBox">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="FontFamily" Value="ABBVoiceoffice"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="BorderBrush" Value="LightSlateGray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <ControlTemplate x:Key="Buttoncorner" TargetType="{x:Type Button}">
+            <Border Name="border" CornerRadius="5" Background="Blue"  Padding="2" BorderThickness="1" >
+                <ContentPresenter HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="Buttoncorner2" TargetType="Button">
+            <Border Name="border" CornerRadius="5"  Padding="2" BorderThickness="1" Background="White">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+        <Style x:Key="texters" TargetType="TextBox">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="FontFamily" Value="ABBVoiceoffice"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="BorderBrush" Value="DimGray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <Style x:Key="LabeLABB" TargetType="Label">
+            <Setter Property="FontFamily" Value="ABBVoiceoffice"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <ControlTemplate x:Key="intializebuttonlaser" TargetType="Button">
+            <Border x:Name="bordercolor" CornerRadius="9" Background="Black" Padding="2">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" TargetName="bordercolor" Value="blue"/>
+                    <Setter Property="BorderBrush" TargetName="bordercolor" Value="blue"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <LinearGradientBrush x:Key="border" StartPoint="0.5,0" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox">
+            <GradientStop Color="#FFB6B6B6" Offset="0.9"/>
+            <GradientStop Color="#FFBEBEBE" Offset="0.7"/>
+            <GradientStop Color="#FFD1D1D1" Offset="0.5"/>
+            <GradientStop Color="#FFE5E5E5" Offset="0.2"/>
+            <GradientStop Color="#FFF7F7F7" Offset="0.1"/>
+        </LinearGradientBrush>
+        <Style TargetType="ComboBox" x:Key="COMBOCOLOR">
+            <Setter Property="Background" Value="{StaticResource border}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="abbVOICEOFFICE"/>
+        </Style>
     </Application.Resources>
+
 </Application>

@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="ABB.MLA.A1.mVFDStation.UserControls.mVTestUc"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ABB.MLA.A1.mVFDStation.UserControls"
+             mc:Ignorable="d" 
+             Height="Auto" Width="Auto" Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="mV Drop" FontFamily="Abbvoiceoffice" FontWeight="Bold" Grid.Row="0" Grid.RowSpan="2"></Label>
+        <Label Content="P1" FontFamily="Abbvoiceoffice" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="1"></Label>
+        <Label Content="P2" FontFamily="Abbvoiceoffice" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="2"></Label>
+        <Label Content="P3" FontFamily="Abbvoiceoffice" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="3"></Label>
+        <Label Content="P4" FontFamily="Abbvoiceoffice" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="4"></Label>
+        <local:TextBoxUc Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
+        <local:TextBoxUc Grid.Row="1" Grid.Column="2"></local:TextBoxUc>
+        <local:TextBoxUc Grid.Row="1" Grid.Column="3"></local:TextBoxUc>
+        <local:TextBoxUc Grid.Row="1" Grid.Column="4"></local:TextBoxUc>
+        <StackPanel Orientation="Vertical" Grid.Row="0" HorizontalAlignment="Right" Grid.RowSpan="3" Grid.Column="5" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="mV Min        " FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
+                <local:TextBoxUc></local:TextBoxUc>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="mV Max       " FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
+                <local:TextBoxUc></local:TextBoxUc>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="mV Current" FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
+                <local:TextBoxUc></local:TextBoxUc>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

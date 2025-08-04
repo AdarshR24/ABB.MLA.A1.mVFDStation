@@ -23,6 +23,11 @@ namespace ABB.MLA.A1.mVFDStation.ViewModel
         }
 
         private string _overallstationerrors;
+        public LoadingStationVM LoadingData { get; set; }
+        public UnloadingStationVM UnloadingData { get; set; }
+
+        public TestSequenceVM TestData { get; set; }
+
 
         public string Overallstationerror
         {
@@ -39,7 +44,7 @@ namespace ABB.MLA.A1.mVFDStation.ViewModel
       
         
         private ModbusClass mb;
-
+        DataTable dt=new DataTable();
 
         public DBConnect db { get; set; }
         public HomeViewModel(ModbusClass MB)
@@ -48,6 +53,9 @@ namespace ABB.MLA.A1.mVFDStation.ViewModel
             ErrorHandler.Instance.OverallStationErrors.ErrorListUpdated += OverallStationErrors_ErrorListUpdated;
             db =  new DBConnect();
             mb.WriteSingleCoil("152", true);
+            LoadingData=new LoadingStationVM(mb,db);
+            UnloadingData = new UnloadingStationVM(mb, db);
+            TestData = new TestSequenceVM(mb, db);
         }
 
         private void OverallStationErrors_ErrorListUpdated(object sender, EventArgs e)

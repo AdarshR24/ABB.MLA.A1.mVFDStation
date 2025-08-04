@@ -56,7 +56,7 @@ namespace ABB.MLA.A1.mVFDStation.ViewModel
             // get PLC IP from here
 
             mb = new ModbusClass();
-            mb.Initialize("192.168.2.20", 502);
+            mb.Initialize("192.168.13.20", 502);
 
 
             ViewModelCollection viewModelCollection = new ViewModelCollection(mb);

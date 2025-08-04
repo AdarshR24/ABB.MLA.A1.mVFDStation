@@ -9,9 +9,9 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="115"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="5"></RowDefinition>
-            <RowDefinition/>
+            <RowDefinition Height="0.8*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Grid.RowDefinitions>
@@ -42,7 +42,7 @@
             <Rectangle Visibility="{Binding Navigation.Visiblities[5]}" Fill="Blue" Grid.Row="2" Grid.Column="5"/>
             <Rectangle  Visibility="{Binding Navigation.Visiblities[6]}" Fill="Blue" Grid.Row="2" Grid.Column="6"/>
             <Rectangle  Visibility="{Binding Navigation.Visiblities[7]}" Fill="Blue" Grid.Row="2" Grid.Column="7"/>
-            <Label Content="EMAX Welding 6.2" Foreground="White" FontWeight="Bold" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" 
+            <Label Content="Station Name" Foreground="White" FontWeight="Bold" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" 
                VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Margin="0,0,0,0"/>
             <!--<Image Source="CustomerLogo.png" Grid.Column="8"/>-->
             <Label Content="ABB" Background="Black" Foreground="White"
@@ -60,7 +60,7 @@
                 Command="{Binding HomeCommand}"
                 >
                 <StackPanel Orientation="Vertical" >
-                    <Image Source="/Resources/Images/abb_home_24.png" Stretch="None" Width="50"/>
+                    <Image Source="/Resources/Images/abb_home_24.png" Stretch="None" Width="30"/>
                     <Label Content="HOME" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
@@ -68,56 +68,57 @@
                 Command="{Binding ManualCommand}"
                 >
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/Resources/Images/manuall.png" Stretch="None" Width="50"/>
+                    <Image Source="/Resources/Images/manuall.png" Stretch="None" Width="30"/>
                     <Label Content="MANUAL" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
             <Button x:Name="Parameter_btn" BorderBrush="White" BorderThickness="0" Focusable="False" Background="White"
                 Grid.Column="2" Grid.Row="1" Command="{Binding ParameterCommand}" >
                 <StackPanel Orientation="Vertical" >
-                    <Image Source="/Resources/Images/parameter.png" Stretch="None" Width="50"/>
+                    <Image Source="/Resources/Images/parameter.png" Stretch="None" Width="30"/>
                     <Label Content="PARAMETER" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
             <Button x:Name="Database_btn" BorderBrush="White" BorderThickness="0" Focusable="False" Background="White"
                 Grid.Column="3" Grid.Row="1"  Command="{Binding DatabaseCommand}" >
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/Resources/Images/database.png" Stretch="None" Width="50"/>
+                    <Image Source="/Resources/Images/database.png" Stretch="None" Width="30"/>
                     <Label Content="DATABASE" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <Button x:Name="Downgrade_btn" BorderBrush="White" BorderThickness="0" Focusable="False" Command="{Binding DowngradeCommand}"
-                Background="White" Grid.Column="4" Grid.Row="1" >
+            <Button BorderBrush="White" BorderThickness="0" Focusable="False" Background="White"
+     Grid.Column="4" Grid.Row="1"  Command="{Binding DowngradeButton}" >
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/Resources/Images/downgrad.png" Stretch="None" Width="50"/>
+                    <Image Source="/Resources/Images/downgrad.png" Stretch="None" Width="30"/>
                     <Label Content="DOWNGRADE" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <Button  BorderBrush="White" BorderThickness="0" Focusable="False" Width="200" Background="White" Grid.Column="4" 
-                 Grid.Row="1"  Grid.ColumnSpan="3" Height="64"  Command="{Binding ReportCommand}"
-                 Margin="144,0,144,0" VerticalAlignment="Top">
+          
+            <Button BorderBrush="White" BorderThickness="0" Focusable="False" Background="White"
+     Grid.Column="5" Grid.Row="1"  Command="{Binding ReportCommand}" >
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/Resources/Images/report.png" Stretch="None" Width="50"/>
+                    <Image Source="/Resources/Images/report.png" Stretch="None" Width="30"/>
                     <Label Content="REPORT" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
+          
             <Button x:Name="Calibration_btn" BorderBrush="White" BorderThickness="0" Focusable="False" Background="White" Grid.Column="6" Grid.Row="1" >
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/Resources/Images/Validat.png" Stretch="None" Width="50"/>
+                    <Image Source="/Resources/Images/calibratio.png" Stretch="None" Width="30"/>
                     <Label Content="CALIBRATION" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
             <Button x:Name="Quality_btn" BorderBrush="White" BorderThickness="0" Focusable="False"  Command="{Binding MaintenanceCommand}"
                 Background="White" Grid.Column="7" Grid.Row="1" >
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/Resources/Images/parameter.png" Stretch="None" Width="50"/>
+                    <Image Source="/Resources/Images/parameter.png" Stretch="None" Width="30"/>
                     <Label Content="MAINTENANCE" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
             <Button x:Name="Exit_btn"  BorderBrush="White" BorderThickness="0" Focusable="False" Background="White" Grid.Column="8" Grid.Row="1" 
                 Command="{Binding CloseCommand}">
                 <StackPanel Orientation="Vertical">
-                    <Image Source="/Resources/Images/exitt.png" Stretch="None" Width="50"/>
+                    <Image Source="/Resources/Images/exitt.png" Stretch="None" Width="30"/>
                     <Label Content="EXIT" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"/>
                 </StackPanel>
             </Button>

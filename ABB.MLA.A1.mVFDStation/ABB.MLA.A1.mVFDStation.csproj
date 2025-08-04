@@ -9,6 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\abb_home_24.png" />
+    <None Remove="Resources\Images\calibratio.png" />
+    <None Remove="Resources\Images\database.png" />
+    <None Remove="Resources\Images\downgrad.png" />
+    <None Remove="Resources\Images\exitt.png" />
+    <None Remove="Resources\Images\manuall.png" />
+    <None Remove="Resources\Images\parameter.png" />
+    <None Remove="Resources\Images\report.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentModbus" Version="5.3.2" />
     <PackageReference Include="LiveCharts" Version="0.9.7" />
     <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
@@ -24,6 +35,17 @@
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
     <PackageReference Include="System.Threading.Channels" Version="9.0.7" />
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\abb_home_24.png" />
+    <Resource Include="Resources\Images\calibratio.png" />
+    <Resource Include="Resources\Images\database.png" />
+    <Resource Include="Resources\Images\downgrad.png" />
+    <Resource Include="Resources\Images\exitt.png" />
+    <Resource Include="Resources\Images\manuall.png" />
+    <Resource Include="Resources\Images\parameter.png" />
+    <Resource Include="Resources\Images\report.png" />
   </ItemGroup>
 
 </Project>

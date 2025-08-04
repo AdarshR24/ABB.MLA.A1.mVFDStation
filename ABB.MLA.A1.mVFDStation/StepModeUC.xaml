@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="ABB.MLA.A1.mVFDStation.StepModeUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ABB.MLA.A1.mVFDStation" xmlns:usercontrols="clr-namespace:ABB.MLA.A1.mVFDStation.UserControls"
+             mc:Ignorable="d" 
+             Height="Auto" Width="Auto" Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="1.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" >
+            <StackPanel Orientation="Horizontal">
+                <CheckBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></CheckBox>
+                <Label Content="Step Mode" FontWeight="Bold" Width="200"
+                       FontFamily="Abbvoiceoffice"></Label>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Button Height="20" Width="90" HorizontalAlignment="Right"
+        Command="{Binding BtnCommand, ElementName=root}"
+     Content="Cycle Stop" 
+   Style="{StaticResource Button_all}"></Button>
+        </Grid>
+        <Grid Grid.Column="4">
+            <usercontrols:InitUc ButtonContent="Reset" HorizontalAlignment="Right"></usercontrols:InitUc>
+        </Grid>
+    </Grid>
+</UserControl>
+
