@@ -36,8 +36,8 @@
             <Grid Grid.Column="3">
                 <local:TextBoxUc Color="White"></local:TextBoxUc>
             </Grid>
-            <local:SerialNoUC Grid.Column="1"></local:SerialNoUC>
-            <local:SerialNoUC Grid.Column="2"></local:SerialNoUC>
+            <local:SerialNoUC SerialNo="{Binding StationDetails.SerialNo1,ElementName=root}" Grid.Column="1"></local:SerialNoUC>
+            <local:SerialNoUC SerialNo="{Binding StationDetails.SerialNo2,ElementName=root}" Grid.Column="2"></local:SerialNoUC>
 
         </Grid>
         <Grid Grid.Row="2">
@@ -50,8 +50,8 @@
                 <ColumnDefinition Width="0.2*"/>
             </Grid.ColumnDefinitions>
 
-            <local:SerialNoUC Grid.Column="1"></local:SerialNoUC>
-            <local:SerialNoUC Grid.Column="2"></local:SerialNoUC>
+            <local:SerialNoUC SerialNo="{Binding StationDetails.SerialNo3,ElementName=root}" Grid.Column="1"></local:SerialNoUC>
+            <local:SerialNoUC SerialNo="{Binding StationDetails.SerialNo4,ElementName=root}" Grid.Column="2"></local:SerialNoUC>
 
         </Grid>
 
@@ -78,10 +78,10 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Content="Endurance" FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
-            <local:TextBoxUc Grid.Column="1"></local:TextBoxUc>
-            <local:TextBoxUc Grid.Column="2"></local:TextBoxUc>
-            <local:TextBoxUc Grid.Column="3"></local:TextBoxUc>
-            <local:TextBoxUc Grid.Column="4"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding StationDetails.EdrRes1,ElementName=root}" Grid.Column="1"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding StationDetails.EdrRes2,ElementName=root}" Grid.Column="2"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding StationDetails.EdrRes3,ElementName=root}" Grid.Column="3"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding StationDetails.EdrRes4,ElementName=root}" Grid.Column="4"></local:TextBoxUc>
             <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="5" HorizontalAlignment="Right" Grid.ColumnSpan="2">
                 <Label Content="Endurance(SV)" FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
                 <local:TextBoxUc></local:TextBoxUc>
@@ -99,10 +99,10 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Content="Trip" FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
-            <local:TextBoxUc Grid.Column="1"></local:TextBoxUc>
-            <local:TextBoxUc Grid.Column="2"></local:TextBoxUc>
-            <local:TextBoxUc Grid.Column="3"></local:TextBoxUc>
-            <local:TextBoxUc Grid.Column="4"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding StationDetails.TripRes1,ElementName=root}" Grid.Column="1"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding StationDetails.TripRes2,ElementName=root}" Grid.Column="2"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding StationDetails.TripRes3,ElementName=root}" Grid.Column="3"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding StationDetails.TripRes4,ElementName=root}" Grid.Column="4"></local:TextBoxUc>
             <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="5" HorizontalAlignment="Right" Grid.ColumnSpan="2">
                 <Label Content="Trip(SV)" FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
                 <local:TextBoxUc></local:TextBoxUc>
@@ -117,8 +117,30 @@
             </StackPanel>
         </Grid>
         <Grid Grid.Row="7" Grid.RowSpan="3">
-            <local:mVTestUc Visibility="{Binding StationDetails.mVVisible,ElementName=root}"></local:mVTestUc>
-            <local:FDTestUc Visibility="{Binding StationDetails.FDVisible,ElementName=root}"></local:FDTestUc>
+            <local:mVTestUc
+                Visibility="{Binding StationDetails.mVVisible,ElementName=root}"
+                P1="{Binding StationDetails.P1,ElementName=root}"
+                P2="{Binding StationDetails.P2,ElementName=root}"
+                P3="{Binding StationDetails.P3,ElementName=root}"
+                P4="{Binding StationDetails.P4,ElementName=root}"
+                P1Brush="{Binding StationDetails.P1Brush,ElementName=root}"
+                P2Brush="{Binding StationDetails.P2Brush,ElementName=root}"
+                P3Brush="{Binding StationDetails.P3Brush,ElementName=root}"
+                P4Brush="{Binding StationDetails.P4Brush,ElementName=root}"
+
+                ></local:mVTestUc>
+            <local:FDTestUc
+                Visibility="{Binding StationDetails.FDVisible,ElementName=root}"
+                F1Data="{Binding StationDetails.F1Text,ElementName=root}"
+                F2Data="{Binding StationDetails.F2Text,ElementName=root}"
+                D2Data="{Binding StationDetails.D2Text,ElementName=root}"
+                D1Data="{Binding StationDetails.D1Text,ElementName=root}"
+
+                F1Brush="{Binding StationDetails.F1Brush,ElementName=root}"
+                D1Brush="{Binding StationDetails.D1Brush,ElementName=root}"
+                F2Brush="{Binding StationDetails.F2Brush,ElementName=root}"
+                D2Brush="{Binding StationDetails.D2Brush,ElementName=root}"
+                ></local:FDTestUc>
            
         </Grid>
     </Grid>

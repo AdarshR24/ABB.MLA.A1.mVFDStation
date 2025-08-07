@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ABB.MLA.A1.mVFDStation.UserControls"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" x:Name="root"
                     Height="Auto" Width="Auto" Background="White">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -22,36 +22,36 @@
         <Label Content="P2" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Abbvoiceoffice"></Label>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1">
             <Label FontWeight="Bold" FontFamily="Abbvoiceoffice" Content="Force      "></Label>
-            <local:TextBoxUc Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding F1Data,ElementName=root}" Color="{Binding F1Brush,ElementName=root}"  Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1">
             <Label FontWeight="Bold" FontFamily="Abbvoiceoffice" Content="Distance"></Label>
-            <local:TextBoxUc Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding D1Data,ElementName=root}" Color="{Binding D1Brush,ElementName=root}" Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2">
             <Label FontWeight="Bold" FontFamily="Abbvoiceoffice" Content="Force      "></Label>
-            <local:TextBoxUc Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding F2Data,ElementName=root}" Color="{Binding F2Brush,ElementName=root}" Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2">
             <Label FontWeight="Bold" FontFamily="Abbvoiceoffice" Content="Distance"></Label>
-            <local:TextBoxUc Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
+            <local:TextBoxUc value="{Binding D2Data,ElementName=root}" Color="{Binding D2Brush,ElementName=root}"  Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Row="0" HorizontalAlignment="Right" Grid.RowSpan="3" Grid.Column="5" Grid.ColumnSpan="2">
             <StackPanel Orientation="Horizontal" Height="20">
                 <Label Content="Force Min        " FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
-                <local:TextBoxUc Margin="0.5,0,0,0"></local:TextBoxUc>
+                <local:TextBoxUc value="{Binding FMin,ElementName=root}" Margin="0.5,0,0,0"></local:TextBoxUc>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="20" Margin="0.5">
                 <Label Content="Force Max       " FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
-                <local:TextBoxUc></local:TextBoxUc>
+                <local:TextBoxUc value="{Binding FMax,ElementName=root}"></local:TextBoxUc>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="20" Margin="0.5">
                 <Label Content="Distance Min " FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
-                <local:TextBoxUc Margin="1.5,0,0,0"></local:TextBoxUc>
+                <local:TextBoxUc value="{Binding DMin,ElementName=root}" Margin="1.3,0,0,0"></local:TextBoxUc>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="20" Margin="0.5">
                 <Label Content="Distance Max" FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
-                <local:TextBoxUc Margin="1.5,0,0,0"></local:TextBoxUc>
+                <local:TextBoxUc value="{Binding DMax,ElementName=root}" Margin="1.32,0,0,0"></local:TextBoxUc>
             </StackPanel>
         </StackPanel>
     </Grid>

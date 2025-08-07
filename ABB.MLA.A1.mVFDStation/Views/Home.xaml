@@ -34,7 +34,7 @@
             <UC:LoadingStationUc StationDetails="{Binding LoadingData,UpdateSourceTrigger=PropertyChanged}" ></UC:LoadingStationUc>
         </Grid>
         <Grid Grid.Row="2">
-            <UC:TestingUc StationDetails="{Binding TestData,UpdateSourceTrigger=PropertyChanged}"></UC:TestingUc>
+            <UC:TestingUc  StationDetails="{Binding TestData,UpdateSourceTrigger=PropertyChanged}"></UC:TestingUc>
         </Grid>
         <Grid Grid.Row="4">
             <UC:UnloadingUC StationDetails="{Binding UnloadingData,UpdateSourceTrigger=PropertyChanged}"></UC:UnloadingUC>

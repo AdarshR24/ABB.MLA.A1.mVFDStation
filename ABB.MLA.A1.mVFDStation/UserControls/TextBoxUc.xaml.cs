@@ -20,10 +20,6 @@ namespace ABB.MLA.A1.mVFDStation.UserControls
     /// </summary>
     public partial class TextBoxUc : UserControl
     {
-
-
-
-
         public Brush Color
         {
             get { return (Brush)GetValue(ColorProperty); }

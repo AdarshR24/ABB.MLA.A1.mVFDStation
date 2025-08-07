@@ -37,7 +37,7 @@
 
             </Grid>
         </Viewbox>
-        <Label Content="{Binding OEEDisp,ElementName=root}" 
+        <Label Content="" 
                HorizontalAlignment="Center"
                VerticalAlignment="Center"></Label>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="OEE" 

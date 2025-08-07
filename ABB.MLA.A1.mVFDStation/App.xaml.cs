@@ -10,7 +10,7 @@ namespace ABB.MLA.A1.mVFDStation
     public partial class App : Application
     {
 
-        public static string ConnectionString = "Server=DESKTOP-3K4GJUO\\SQLEXPRESS;Database=TB_LocalData;Integrated Security=True;TrustServerCertificate=True";
+        public static string ConnectionString = "Server=DESKTOP-AGB9NFH\\SQLEXPRESS01;Database=TB_LocalData;Integrated Security=True;TrustServerCertificate=True";
     }
 
 }

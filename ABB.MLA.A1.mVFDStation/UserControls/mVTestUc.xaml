@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ABB.MLA.A1.mVFDStation.UserControls"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" x:Name="root"
              Height="Auto" Width="Auto" Background="White">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -25,22 +25,22 @@
         <Label Content="P2" FontFamily="Abbvoiceoffice" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="2"></Label>
         <Label Content="P3" FontFamily="Abbvoiceoffice" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="3"></Label>
         <Label Content="P4" FontFamily="Abbvoiceoffice" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="0" Grid.Column="4"></Label>
-        <local:TextBoxUc Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
-        <local:TextBoxUc Grid.Row="1" Grid.Column="2"></local:TextBoxUc>
-        <local:TextBoxUc Grid.Row="1" Grid.Column="3"></local:TextBoxUc>
-        <local:TextBoxUc Grid.Row="1" Grid.Column="4"></local:TextBoxUc>
+        <local:TextBoxUc value="{Binding P1,ElementName=root}" Color="{Binding P1Brush,ElementName=root}" Grid.Row="1" Grid.Column="1"></local:TextBoxUc>
+        <local:TextBoxUc value="{Binding P2,ElementName=root}" Color="{Binding P2Brush,ElementName=root}" Grid.Row="1" Grid.Column="2"></local:TextBoxUc>
+        <local:TextBoxUc value="{Binding P3,ElementName=root}" Color="{Binding P3Brush,ElementName=root}" Grid.Row="1" Grid.Column="3"></local:TextBoxUc>
+        <local:TextBoxUc value="{Binding P4,ElementName=root}" Color="{Binding P4Brush,ElementName=root}" Grid.Row="1" Grid.Column="4"></local:TextBoxUc>
         <StackPanel Orientation="Vertical" Grid.Row="0" HorizontalAlignment="Right" Grid.RowSpan="3" Grid.Column="5" Grid.ColumnSpan="2">
             <StackPanel Orientation="Horizontal">
                 <Label Content="mV Min        " FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
-                <local:TextBoxUc></local:TextBoxUc>
+                <local:TextBoxUc value="{Binding MVMin,ElementName=root}"></local:TextBoxUc>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="mV Max       " FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
-                <local:TextBoxUc></local:TextBoxUc>
+                <local:TextBoxUc value="{Binding MVMax,ElementName=root}"></local:TextBoxUc>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="mV Current" FontFamily="Abbvoiceoffice" FontWeight="Bold"></Label>
-                <local:TextBoxUc></local:TextBoxUc>
+                <local:TextBoxUc value="{Binding MVCurrent,ElementName=root}"></local:TextBoxUc>
             </StackPanel>
         </StackPanel>
     </Grid>
